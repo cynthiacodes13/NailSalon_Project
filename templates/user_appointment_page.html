@@ -1,0 +1,72 @@
+<DOCTYPE! html>
+<html>
+  <head>
+    <style>
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #customers td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #customers tr:hover {background-color: #ddd;}
+    
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: pink;
+      color: white;
+    }
+
+    h1{
+      color:rgb(86, 187, 153);
+      position:center;
+
+    }
+
+    p{
+      font-size:20px;
+      color:rgb(86, 187, 153);
+    }
+
+    </style>
+    </head>
+
+
+
+
+
+    <body>
+      <h1>Hi {{user.username}},</h1>
+      <p>Your appointment is listed below!</p>
+
+      <table id="customers">
+        <tr>
+          <th>Date:</th>
+          <th>Time:</th>
+          <th>Manicure Type:</th>
+          <th>Manicure Color:</th>
+          <th>Manicure Shape:</th>
+          <th>Pedicure:</th>
+          <th>Pedicure Color:</th>
+        </tr>
+
+        {% for appointment in user.appointments %}
+        <tr>
+          <td>{{appointment.date}}</td>
+          <td>{{appointment.time}}</td>
+          <td>{{appointment.mani_type}}</td>
+          <td>{{appointment.mani_color}}</td>
+          <td>{{appointment.mani_shape}}</td>
+          <td>{{appointment.pedi}}</td>
+         <td>{{appointment.pedi_color}}</td>
+        </tr>
+        {% endfor %}
+</html>

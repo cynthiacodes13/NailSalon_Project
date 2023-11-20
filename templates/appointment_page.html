@@ -1,0 +1,127 @@
+<DOCTYPE! html>
+<html>
+    <head>
+        <style>
+          input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      
+    
+      
+      input[type=submit] {
+        width: 100%;
+        background-color: #ce9ba2;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      input[type=submit]:hover {
+        background-color: #c7848d;
+      }
+      
+      div {
+        border-radius: 1px;
+        background-color: #f2f2f2;
+        padding: 40px 800px;
+        width: 35%;
+      }
+      
+      img {  
+        border-radius: 8px;
+        height: 45%;
+        width: 100%;
+        padding: 12px 20px;
+        margin: -500px -700;
+        display: inline-block;
+        border: 5px solid #9cecd5;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      
+        </style>
+      </head>
+
+
+
+
+    <div>
+    <body>
+        <h1>Appointment Page</h1>
+        <p>Hi {{user_name}}</p>
+        <form action="/appointment" method="POST">
+            <label  for = "date">Date:</label>
+            <input type="date" id = "date" name = "date"><br>
+            <label  for = "time">Time:</label>
+            <select name = "time" id = "time">
+                <option value = "9:00am">9:00am</option>
+                <option value = "10:00am">10:00am</option>
+                <option value = "11:00am">11:00am</option>
+                <option value = "12:00pm">12:00pm</option>
+                <option value = "1:00pm">1:00pm</option>
+                <option value = "1:00pm">2:00pm</option>
+                <option value = "3:00pm">3:00pm</option>
+                <option value = "4:00pm">4:00pm</option>
+                <option value = "5:00pm">5:00pm</option>
+            </select><br>
+            <label  for = "manitype">Manicure Type:</label>
+            <select name = "manitype" id = "manitype">
+                <option value = "Regular Manicure">Regular Manicure</option>
+                <option value = "French Manicure">French Manicure</option>
+                <option value = "Gel Manicure">Gel Manicure</option>
+                <option value = "Acrylic Manicure">Acrylic Manicure</option>
+            </select><br>
+            <label  for = "manishape">Manicure Shape:</label>
+            <select name = "manishape" id = "manishape">
+                <option value = "Almond">Almond</option>
+                <option value = "Coffin">Coffin</option>
+                <option value = "Square">Square</option>
+                <option value = "Round">Round</option>
+                <option value = "Pointy">Pointy</option>
+            </select><br>
+            <label  for = "manicolor">Manicure Color:</label>
+            <select name = "manicolor" id = "manicolor">
+                <option value = "Black">Black</option>
+                <option value = "Blue">Blue</option>
+                <option value = "Green">Green</option>
+                <option value = "Orange">Orange</option>
+                <option value = "Pink">Pink</option>
+                <option value = "Purple">Purple</option>
+                <option value = "Red">Red</option>
+                <option value = "Yellow">Yellow</option>
+                <option value = "White">White</option>
+            </select><br>
+            <label  for = "pedi">Pedicure:</label>
+            <select name = "pedi" id = "pedi">
+                <option value = "Yes">Yes</option>
+                <option value = "No">No</option>
+            </select><br>
+            <label  for = "pedicolor">Pedicure Color:</label>
+            <select name = "pedicolor" id = "pedicolor">
+                <option value = "Black">Black</option>
+                <option value = "Blue">Blue</option>
+                <option value = "Green">Green</option>
+                <option value = "Orange">Orange</option>
+                <option value = "Pink">Pink</option>
+                <option value = "Purple">Purple</option>
+                <option value = "Red">Red</option>
+                <option value = "Yellow">Yellow</option>
+                <option value = "White">White</option>
+                <option value = "None">None</option>
+            </select><br>
+            <input type = "submit" value="Submit">
+            <img src="/static/nailpolishimg.jpg"  width="300" height="300">
+        </form>
+
+    </body>
+    </div>
+</html>

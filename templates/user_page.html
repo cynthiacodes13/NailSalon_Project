@@ -1,0 +1,64 @@
+<DOCTYPE! html>
+<html>
+  <head>
+    
+    <style>
+    .container {
+      position: relative;
+      font-family: Arial;
+    }
+    
+    .text-block {
+      position: absolute;
+      bottom: 360px;
+      right: 355px;
+      height:170px;
+      background-color:white;
+      color: rgb(234, 171, 211);
+      padding-left: 100px;
+      padding-right: 100px;
+
+    }
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+    body {
+      background-color: rgb(144, 227, 205);
+    }
+
+    a:link, a:visited {
+      background-color: #9adcc1;
+      color: black;
+      padding: 14px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      
+  
+    }
+
+    a:hover, a:active {
+      background-color: rgb(0, 255, 195);
+     
+    }
+
+
+
+    
+
+    </style>
+    </head>
+
+
+    <body>
+      <div class="container">
+        <img src="/static/nailpolishimg.jpg" style="width:60%;">
+      <div class="text-block">  
+      <h1>Welcome to Self-Expression Nail Salon!</h1>
+      <p>{{user.username}} click on the button to make an appointment</p>
+      <a href="/appointment">Make an appointment</a>
+     
+</html>
