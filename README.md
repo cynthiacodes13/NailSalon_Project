@@ -1,5 +1,5 @@
 # Self-Expression Nail Salon
-Self-Expression Nail Salon is a full-stack web application. Users can make an appointment to get manicure or pedicure.
+Self-Expression Nail Salon is a full-stack web application. Users can make an appointment to get a manicure or pedicure.
 
 ## Technologies
 Python <br>
