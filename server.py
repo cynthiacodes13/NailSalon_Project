@@ -1,18 +1,13 @@
 from flask import Flask, redirect, request, render_template, session, flash
 from flask_debugtoolbar import DebugToolbarExtension
 from jinja2 import StrictUndefined
-
 from model import connect_to_db, db, User, Appointment
 
 
 app = Flask(__name__)
-
-
-
 app.secret_key = "ABC"
-
-
 app.jinja_env.undefined = StrictUndefined
+
 
 
 @app.route('/') 
