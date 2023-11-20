@@ -24,7 +24,7 @@ On the sign in page the user would enter their username and password.
 ![SignPage](/static/SinInPage.png)
 
 ### Welcome Page
-On the welcome page the user is directed to click on the make appointment button.
+On the welcome page the user is directed to click on the make an appointment button.
 ![welcomepage](/static/MakeAnAppointment.png)
 
 ### Appointment Page
