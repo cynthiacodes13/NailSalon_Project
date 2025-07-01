@@ -13,19 +13,21 @@ app.jinja_env.undefined = StrictUndefined
 
 @app.route('/') 
 def index():
-    """Homepage."""
+    """Homepage"""
   
     return render_template("homepage.html")
 
 
 @app.route('/register', methods=['GET'])
 def register_form():
+    """Registration form"""
     
     return render_template("register_page.html")    
 
 
 @app.route('/register', methods=['POST'])
 def registeration_process():
+    """New user resgistered"""
 
     username = request.form["username"]
     password = request.form["password" ]
@@ -39,12 +41,15 @@ def registeration_process():
 
 @app.route('/signin', methods=['GET'])
 def sign_form():
+    """SignIn Page"""
     
     return render_template("signin_page.html") 
 
 
 @app.route('/signin', methods=['POST'])
 def registeration_check():
+    """Check if the user exist, if yes redirect them to their account page. 
+    If they do not exist give them an error message"""
 
     username = request.form["username"]
     password = request.form["password" ]
@@ -67,6 +72,7 @@ def registeration_check():
 
 @app.route("/users/<int:user_id>")
 def user_page(user_id):
+    """User account page"""
 
     user = User.query.get(user_id)
     
@@ -76,6 +82,8 @@ def user_page(user_id):
 
 @app.route('/appointment', methods=['GET'])
 def appointment_page():
+    """Appointment page"""
+    
     user_id = session["user_id"]
     user = User.query.filter_by(user_id=user_id).first()
 
@@ -86,6 +94,8 @@ def appointment_page():
 
 @app.route('/appointment', methods=['POST'])
 def appointment_process():
+    """Process the user appointment information"""
+    
     user_id = session["user_id"]
     user = User.query.filter_by(user_id=user_id).first()
     
