@@ -21,6 +21,13 @@ class FlaskTests(unittest.TestCase):
         result = self.client.post("/signin", data={"username": "cindy", "password": "123"},
                                   follow_redirects=True)
         self.assertIn(b"We care for our users", result.data)
+
+
+    def test_appointment_form(self):
+
+        result = self.client.post("/appointment", data={"data":"04/10/24", "time": "10:00am", "manitype":"Gel Manicure", "manishape":"Coffin", "manicolor":"Green", "pedi": "Yes", "pedicolor":"Green"})
+        self.assertIn(b'Super Cool! We are getting the same Manicure and Pedicure', result.data)
+        
         
 
 
