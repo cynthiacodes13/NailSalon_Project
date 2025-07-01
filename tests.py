@@ -18,9 +18,8 @@ class FlaskTests(unittest.TestCase):
 
     def test_signin(self):
 
-        result = self.client.post("/signin", data={ "username": "cindy", "password": "123"},
+        result = self.client.post("/signin", data={"username": "cindy", "password": "123"},
                                   follow_redirects=True)
-
         self.assertIn(b"We care for our users", result.data)
         
 
