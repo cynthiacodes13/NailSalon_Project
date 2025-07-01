@@ -6,6 +6,7 @@ from model import connect_to_db, db
 class FlaskTests(unittest.TestCase):
 
     def setUp(self):
+        """Something that does before every test"""
 
         self.client = server.app.test_client()
         server.app.config['TESTING'] = True
