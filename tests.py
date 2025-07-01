@@ -11,12 +11,14 @@ class FlaskTests(unittest.TestCase):
         server.app.config['TESTING'] = True
     
     def test_homepage(self):
+        """Test the homepage"""
 
         result = self.client.get("/")
         self.assertIn(b"Welcome",result.data)
 
 
     def test_signin(self):
+        """Test the sign in page"""
 
         result = self.client.post("/signin", data={"username": "cindy", "password": "123"},
                                   follow_redirects=True)
@@ -24,8 +26,10 @@ class FlaskTests(unittest.TestCase):
 
 
     def test_appointment_form(self):
+        """Test the appointment form"""
 
-        result = self.client.post("/appointment", data={"data":"04/10/24", "time": "10:00am", "manitype":"Gel Manicure", "manishape":"Coffin", "manicolor":"Green", "pedi": "Yes", "pedicolor":"Green"})
+        result = self.client.post("/appointment", data={"data":"04/10/24", "time": "10:00am", "manitype":"Gel Manicure", 
+                                                        "manishape":"Coffin", "manicolor":"Green", "pedi": "Yes", "pedicolor":"Green"})
         self.assertIn(b'Super Cool! We are getting the same Manicure and Pedicure', result.data)
         
         
