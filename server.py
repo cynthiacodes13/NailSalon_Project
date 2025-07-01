@@ -108,7 +108,8 @@ def appointment_process():
     date = request.form["date"]
     time = request.form["time"]
 
-    new_appointment = Appointment(user_id=user_id,mani_type=mani_type,mani_color=mani_color,mani_shape=mani_shape,pedi=pedi,pedi_color=pedi_color,date=date,time=time)
+    new_appointment = Appointment(user_id=user_id,mani_type=mani_type,mani_color=mani_color,
+                                  mani_shape=mani_shape,pedi=pedi,pedi_color=pedi_color,date=date,time=time)
     db.session.add(new_appointment)
     db.session.commit()
     
